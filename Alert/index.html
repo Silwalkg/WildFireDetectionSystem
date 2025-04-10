@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Detection System</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #dc3545; /* Red */
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .notification-icon {
+            margin-right: 10px;
+        }
+
+        .active-alerts {
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .active-alerts-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .alert-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .alert-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .alert-icon {
+            color: #dc3545; /* Red */
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+
+        .alert-details {
+            flex-grow: 1;
+        }
+
+        .alert-location {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .risk-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .risk-info span {
+            margin-right: 15px;
+        }
+
+        .thermometer-icon,
+        .humidity-icon,
+        .wind-icon,
+        .location-icon {
+            margin-right: 5px;
+        }
+
+        .alert-right {
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        /* Background colors based on risk level */
+        .risk-high {
+            background-color: #ffe0e0; /* Light red */
+            border-color: #ffb3b3;
+        }
+
+        .risk-medium {
+            background-color: #fff3cd; /* Light yellow */
+            border-color: #ffe082;
+        }
+
+        .risk-low {
+            background-color: #f0f8ea; /* Light green */
+            border-color: #ccedc6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🔥 FireWatch</div>
+        <div class="header-title">Wildfire Detection System</div>
+        <div class="header-right">
+            <span class="notification-icon">🔔</span>
+            <span class="active-alerts">Active Alerts: 3</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="active-alerts-title">Active Wildfire Alerts</div>
+
+        <div class="alert-card risk-high">
+            <div class="alert-left">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-details">
+                    <div class="alert-location">Yosemite Valley, CA</div>
+                    <div class="risk-info">
+                        <span><span class="location-icon">📍</span> Risk Level: <span style="font-weight: bold;">HIGH</span></span>
+                        <span><span class="thermometer-icon">🌡️</span> 95°F</span>
+                        <span><span class="humidity-icon">💧</span> 45%</span>
+                        <span><span class="wind-icon">💨</span> 25 mph</span>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-right">2 mins ago</div>
+        </div>
+
+        <div class="alert-card risk-medium">
+            <div class="alert-left">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-details">
+                    <div class="alert-location">Sierra National Forest</div>
+                    <div class="risk-info">
+                        <span><span class="location-icon">📍</span> Risk Level: <span style="font-weight: bold;">MEDIUM</span></span>
+                        <span><span class="thermometer-icon">🌡️</span> 88°F</span>
+                        <span><span class="humidity-icon">💧</span> 60%</span>
+                        <span><span class="wind-icon">💨</span> 15 mph</span>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-right">5 mins ago</div>
+        </div>
+
+        <div class="alert-card risk-low">
+            <div class="alert-left">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-details">
+                    <div class="alert-location">Kings Canyon</div>
+                    <div class="risk-info">
+                        <span><span class="location-icon">📍</span> Risk Level: <span style="font-weight: bold;">LOW</span></span>
+                        <span><span class="thermometer-icon">🌡️</span> 82°F</span>
+                        <span><span class="humidity-icon">💧</span> 75%</span>
+                        <span><span class="wind-icon">💨</span> 10 mph</span>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-right">10 mins ago</div>
+        </div>
+    </div>
+</body>
+</html>
